@@ -34,6 +34,10 @@ models.Base.metadata.create_all(bind=engine)
 # ---------------------------------------------------------------------------
 app = FastAPI(title="Lumora Emotion Detection API", version="2.0.0")
 
+@app.get("/")
+def read_root():
+    return {"status": "Lumora Backend is running successfully!"}
+
 raw_origins = os.getenv("ALLOWED_ORIGINS", "*")
 origins = [o.strip() for o in raw_origins.split(",")]
 
