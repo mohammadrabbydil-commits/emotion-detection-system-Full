@@ -38,12 +38,14 @@ app = FastAPI(title="Lumora Emotion Detection API", version="2.0.0")
 def read_root():
     return {"status": "Lumora Backend is running successfully!"}
 
-raw_origins = os.getenv("ALLOWED_ORIGINS", "*")
-origins = [o.strip() for o in raw_origins.split(",")]
-
+# Configure CORS to allow your Vercel frontend to communicate with this backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[
+        "http://localhost:5174", # Allows local frontend testing
+        "https://https://emotion-detection-system-full-3q3v.vercel.app/.vercel.app",
+        "*" # Temporary fallback to allow all domains during initial testing
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
