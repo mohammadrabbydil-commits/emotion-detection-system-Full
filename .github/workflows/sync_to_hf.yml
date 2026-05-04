@@ -17,5 +17,5 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git remote add huggingface https://rabbydatainsight:$HF_TOKEN@huggingface.co/spaces/rabbydatainsight/emotion-detection-system-Full
+          git remote add huggingface https://rabbydatainsight:$HF_TOKEN@huggingface.co/spaces/rabbydatainsight/lumora_backend
           git push huggingface main --force
