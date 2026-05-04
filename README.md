@@ -1,3 +1,14 @@
+---
+title: Lumora Backend
+emoji: ⚡
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
+# Lumora: Real-Time Emotion Detection System
+
 # Lumora: Real-Time Emotion Detection System
 
 Lumora is a state-of-the-art organizational sentiment analysis platform. It utilizes deep learning to provide human resources and management with real-time, privacy-first insights into employee well-being.
